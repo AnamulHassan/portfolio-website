@@ -11,6 +11,7 @@
   --orange-shade1: #ff6249;
   --orange-shade2: #66271d;
   --orange-shade3: #33140f
+  --orange-shade4: #331f17;
   --orange-tint1: #ff7052;
   --orange-tint2: #ff9a74;
   --blue-shade1: #0000fe;
@@ -37,6 +38,18 @@ body {
   align-items: center;
   justify-content: center;
 }
+.section-main{
+  transition: transform 1s, opacity 1s;
+  border-bottom: 1px solid #e9e4e2;
+}
+.section-hidden:nth-child(even){
+  opacity: 0;
+  transform: translateX(8rem);
+}
+.section-hidden:nth-child(odd){
+  opacity: 0;
+  transform: translateY(8rem);
+}
 /* ------------- SECTION HERO ------------- */
 .section-hero {
   height: 100vh;
@@ -47,11 +60,6 @@ body {
 .description-box {
   width: 50vw;
   padding: 3rem;
-}
-.description-box:nth-child(2) {
-  background-image: url(img/dream-bg.png);
-  background-repeat: no-repeat;
-  background-position: right;
 }
 .header {
   font-size: 5rem;
@@ -118,6 +126,11 @@ body {
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
+.description-box:nth-child(2) {
+  background-image: url(img/dream-bg.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
 /* ------------- SECTION TESTIMONIAL ------------- */
 .section-testimonial {
   margin-bottom: 5rem;
@@ -170,4 +183,177 @@ body {
   text-align: center;
   color: var(--orange-shade2);
   font-size: 1.4rem;
+}
+
+/* ------------------------------------- */
+/* -------------RESPONSIVE ------------- */
+
+@media (max-width: 44em){
+  .section {
+    flex-direction: column;
+  }
+  /* ------------- SECTION HERO ------------- */
+  .section-hero {
+    background-size: 100rem;
+  }
+  .description-box {
+    /* background-color: aqua; */
+    width: 100vw;
+    padding: 3rem;
+    padding-top: 20rem;
+  }
+  .header {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+  .header::first-letter {
+    font-size: 5.5rem;
+  }
+  .header:nth-child(2) {
+    margin-bottom: 1.5rem;
+  }
+  .sub-title {
+    font-size: 2.2rem;
+    margin: 0.8rem 0;
+  }
+  .text {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+  .link-button:link,
+  .link-button:visited {
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+  }
+  .img-box {
+    width: 100vw;
+    padding: 1.5rem;
+  }
+  .img {
+    width: 90%;
+  }
+  /* ------------- SECTION DREAM ------------- */
+.section-dream {
+  margin-top: 7rem;
+  padding-bottom: 7rem;
+}
+.sub-header {
+  font-size: 3.5rem;
+  margin-bottom: 1.2rem;
+}
+.description-box:nth-child(2) {
+  background-size: 6.5rem;
+}
+/* ------------- SECTION TESTIMONIAL ------------- */
+.section-testimonial {
+  margin-bottom: 5rem;
+  background-size: 3rem;
+}
+.testimonial-title {
+  font-size: 5rem;
+}
+.testimonial-box {
+  width: 90%;
+  height: 30rem;
+}
+.testimonial-box:nth-child(1) {
+  border-left: 0.7rem solid var(--orange-shade1);
+  border-right: 0.1rem solid var(--blue-shade1);
+}
+.testimonial-box:nth-child(2) {
+  border-right: 0.1rem solid var(--orange-shade1);
+  border-left: 0.7rem solid var(--blue-shade1);
+}
+.position-title {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+.ex-duration {
+  font-size: 1.8rem;
+}
+.text-testimonial {
+  margin-top: 1.5rem;
+  font-size: 1.4rem;
+}
+/* -------------SECTION FOOTER ------------- */
+.footer {
+  font-size: 1rem;
+}
+}
+
+
+@media (max-width: 34em) {
+  .section {
+    flex-direction: column;
+  }
+  /* ------------- SECTION HERO ------------- */
+  .section-hero {
+    background-size: 100rem;
+  }
+  .description-box {
+    /* background-color: burlywood; */
+    width: 100vw;
+    padding: 3rem;
+    padding-top: 15rem;
+  }
+  .header {
+    font-size: 4.5rem;
+    line-height: 5rem;
+  }
+  .header::first-letter {
+    font-size: 5.5rem;
+  }
+  .header:nth-child(2) {
+    margin-bottom: 1.5rem;
+  }
+  .sub-title {
+    font-size: 2.2rem;
+    margin: 0.8rem 0;
+  }
+  .text {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+  .link-button:link,
+  .link-button:visited {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+  }
+  .img-box {
+    width: 100vw;
+    padding: 1.5rem;
+  }
+  .img {
+    width: 85%;
+  }
+  /* ------------- SECTION DREAM ------------- */
+.section-dream {
+  margin-top: 7rem;
+  padding-bottom: 7rem;
+}
+.sub-header {
+  font-size: 3.5rem;
+  margin-bottom: 1.2rem;
+}
+.description-box:nth-child(2) {
+  background-size: 6.5rem;
+}
+/* ------------- SECTION TESTIMONIAL ------------- */
+.section-testimonial {
+  background-size: 4rem;
+}
+.testimonial-title {
+  font-size: 4rem;
+}
+.testimonial-box {
+  width: 90%;
+  height: 30rem;
+}
+.position-title {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+.ex-duration {
+  font-size: 1.6rem;
+}
 }
